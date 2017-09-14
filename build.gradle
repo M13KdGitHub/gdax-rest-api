@@ -1,0 +1,25 @@
+group 'ninja.sakib.gdaxrestapi'
+version '1.0beta'
+
+buildscript {
+    ext.kotlin_version = '1.1.4'
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'kotlin'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    compile group: 'com.eclipsesource.minimal-json', name: 'minimal-json', version: '0.9.4'
+}
